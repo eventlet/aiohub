@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+  "hatch-vcs>=0.3",
+  "hatchling>=1.12.2",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "aiohub"
+authors = [
+    {name = "Hervé Beraud", email = "herveberaud.pro@gmail.com"},
+]
+description = "Library to create compatibility between eventlet and asyncio."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Networking",
+]
+dynamic = ["version"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/4383/aiohub"
+History = "https://github.com/4383/aiohub/blob/main/CHANGELOG.md"
+Tracker = "https://github.com/4383/aiohub/issues"
+Source = "https://github.com/4383/aiohub"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pip-tools", "build", "twine", "pre-commit", "commitizen"]
+
+[options.packages.find]
+where = "aiohub"
+exclude = "tests*"
+
+[tool.hatch]
+version.source = "vcs"
